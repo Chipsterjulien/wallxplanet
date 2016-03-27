@@ -1,0 +1,13 @@
+[Unit]
+Description=Timer for downloadcloudsmap
+
+[Timer]
+# start as soon as possible the firt time (after reboot for example)
+Persistent=true
+OnBootSec=0s
+OnCalendar=hourly
+#OnCalendar=0/1:00:00
+Unit=downloadcloudsmap.service
+
+[Install]
+WantedBy=default.target

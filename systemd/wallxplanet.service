@@ -1,0 +1,15 @@
+[Unit]
+Description=Generate earth wall with cloud
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=http
+Group=http
+ExecStart=/usr/bin/wallxplanet.sh
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Download clouds map every hours
+After=network-online.target
+Wants=downloadcloudsmap.timer
+
+[Service]
+Type=oneshot
+User=http
+Group=http
+ExecStart=/usr/bin/downloadcloudsmap.sh
+
+[Install]
+WantedBy=multi-user.target
